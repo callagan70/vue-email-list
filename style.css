@@ -1,0 +1,13 @@
+/* Inizio Utility */
+*{Padding: 0;
+    Margin: 0;
+    Box-sizing: border-box}
+         
+  .clearfix::after{
+   content: "";
+   display: table;
+   clear: both;}
+     
+  html {
+   scroll-behavior: smooth;}
+   /* Fine Utility */
