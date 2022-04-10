@@ -5,15 +5,31 @@ var app = new Vue({
 // SECTION DATA
     data: {
      
+        emailObj : " ",
+        emailData: null,
     },
 // !SECTION DATA fine
 
 // SECTION Created
     created(){
+
+        for (let i=1; i <= 10; i++)
+        {
         axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-                    .then(function(response) {
-                        console.log(response);
-                    });
+                    .then( (res) => {
+
+                        // console.log('res.data.response: ' + res.data.response);
+                        
+                        this.emailData = res.data.response
+                        // emailData.push(this.emailObj);
+
+                            console.log('emailData: ' + this.emailData)
+
+                            // console.log('emailObj: ' + this.emailObj)
+                        }
+                    )
+        };
+
     },
 // !SECTION Created fine
 
