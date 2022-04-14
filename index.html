@@ -10,29 +10,17 @@
 <body>
 
     <div id="root">
-        
-        <h1>L'email è: {{emailData}}</h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <div>
+        <ul>
+            <li v-for="mail in  emailObj" v-if="emailObj.length == 10">
+                L'email è: {{mail}}
+            </li>
+        </ul>
+      </div>  
     </div>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="./main.js"></script>
 </body>

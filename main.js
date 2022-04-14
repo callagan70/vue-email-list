@@ -1,18 +1,18 @@
 // VueJS
 
-var app = new Vue({
+var app = new Vue(
+    {
     el: '#root',
 // SECTION DATA
+
     data: {
-     
-        emailObj : " ",
-        emailData: null,
+        emailObj : [ ]
     },
+
 // !SECTION DATA fine
 
 // SECTION Created
     created(){
-
         for (let i=1; i <= 10; i++)
         {
         axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
@@ -20,22 +20,27 @@ var app = new Vue({
 
                         // console.log('res.data.response: ' + res.data.response);
                         
-                        this.emailData = res.data.response
-                        // emailData.push(this.emailObj);
+                        // this.emailData = res.data.response
+                        this.emailObj.push(res.data.response);
 
-                            console.log('emailData: ' + this.emailData)
+                            // console.log('emailData: ' + res.data.response)
+                            console.log('emailObj: ' + this.emailObj)
 
-                            // console.log('emailObj: ' + this.emailObj)
                         }
                     )
         };
-
     },
 // !SECTION Created fine
+
+mouted() {
+
+
+},
 
 // SECTION Methods
     methods: {
 
     },
+    
 // !SECTION Methods
   });
